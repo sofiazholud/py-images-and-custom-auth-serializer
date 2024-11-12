@@ -60,6 +60,12 @@ class MovieSerializer(serializers.ModelSerializer):
         return None
 
 
+class MovieCreateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Movie
+        fields = ("id", "title", "description", "duration", "genres", "actors")
+
+
 class MovieImageSerializer(serializers.ModelSerializer):
 
     class Meta:
